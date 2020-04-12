@@ -1,10 +1,11 @@
 import csv
 import tweepy
+from config import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
 
-consumer_key = 'YOUR_TWITTER_CONSUMER_KEY'
-consumer_secret = 'YOUR_TWITTER_CONSUMER_SECRET'
-access_token = 'YOUR_TWITTER_ACCESS_TOKEN'
-access_token_secret = 'YOUR_TWITTER_ACCESS_TOKEN_SECRET'
+consumer_key = CONSUMER_KEY
+consumer_secret = CONSUMER_SECRET
+access_token = ACCESS_TOKEN
+access_token_secret = ACCESS_TOKEN_SECRET
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
