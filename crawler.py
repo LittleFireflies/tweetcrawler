@@ -18,6 +18,7 @@ results = api.search(q=query, count=100)
 
 csvFile = open('binus.csv', 'a')
 csvWriter = csv.writer(csvFile)
+csvWriter.writerow(["tweeted_at", 'username', 'tweet'])
 
 for tweet in results:
     display = tweet.user.screen_name, "Tweeted:",tweet.text
