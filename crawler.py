@@ -11,16 +11,16 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
-query = "binus"
+query = "dicoding"
 language = "id"
 
 results = api.search(q=query, count=100)
 
-csvFile = open('binus.csv', 'a')
-csvWriter = csv.writer(csvFile)
-csvWriter.writerow(["tweeted_at", 'username', 'tweet'])
+# csvFile = open('binus.csv', 'a')
+# csvWriter = csv.writer(csvFile)
+# csvWriter.writerow(["tweeted_at", 'username', 'tweet'])
 
 for tweet in results:
     display = tweet.user.screen_name, "Tweeted:",tweet.text
     print(display)
-    csvWriter.writerow([tweet.created_at, tweet.user.screen_name, tweet.text])
+    # csvWriter.writerow([tweet.created_at, tweet.user.screen_name, tweet.text])
